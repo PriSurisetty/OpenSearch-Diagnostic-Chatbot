@@ -722,7 +722,7 @@ def lambda_handler(event, context):
            if not cluster_name:
                # No cluster name provided - this should trigger the slot prompt in Lex
                # But if we reach here, use fallback
-               cluster_name = "cluster_name"  # fallback
+               cluster_name = "cluster_name"  # replace with name of fallback intent
                print(f"DEBUG - Using fallback cluster_name: {cluster_name}")
           
            domain_endpoint = CLUSTER_ENDPOINTS.get(cluster_name)
