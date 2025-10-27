@@ -2,6 +2,9 @@
 
 This project is a troubleshooting chatbot for OpenSearch clusters.  It uses **Amazon Lex**, **AWS Lambda**, and **AWS4Auth** to check cluster health and guide users through fixes for yellow and red cluster states.
 
+> **Note:** This project is not currently deployed.  
+> It uses AWS resources that were only available during my internship, so the active environment is no longer running.  
+> The code and logic here are for demonstration purposes.
 ---
 
 ## 📌 Overview
