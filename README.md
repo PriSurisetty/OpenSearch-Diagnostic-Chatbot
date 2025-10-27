@@ -1,7 +1,6 @@
 # OpenSearch Diagnostic Chatbot
 
-This project is a troubleshooting chatbot for OpenSearch clusters.  
-It uses **Amazon Lex**, **AWS Lambda**, and **AWS4Auth** to check cluster health and guide users through fixes for yellow and red cluster states.
+This project is a troubleshooting chatbot for OpenSearch clusters.  It uses **Amazon Lex**, **AWS Lambda**, and **AWS4Auth** to check cluster health and guide users through fixes for yellow and red cluster states.
 
 ---
 
@@ -66,6 +65,19 @@ export DEBUG=false
 
 ### 5. Deploy to Lambda.
 Use your preferred method (SAM, CDK, Serverless Framework, or manual upload).
+
+### 6. Amazon Lex Setup
+
+This project uses **Amazon Lex** as the front end for the chatbot.
+
+To set it up:
+1. Create a new Lex bot in the AWS console.  
+2. Add an intent (for example: `DiagnoseClusterIntent`).  
+3. Configure slots for `ClusterName` and `UserResponse` if needed.  
+4. Set the bot’s Lambda fulfillment function to this Lambda.  
+5. Build and test the bot.
+
+Once linked, Lex will pass the user’s input to the Lambda function and return the troubleshooting steps.
 
 
 ## 🔐 Security Notes
